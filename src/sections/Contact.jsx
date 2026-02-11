@@ -14,8 +14,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "mwilliams@banyanlabs.io",
-    href: "mailto:mwilliams@banyanlabs.io",
+    value: "mwilliams1.prsvr@gmail.com",
+    href: "mailto:mwilliams1.prsvr@gmail.com",
   },
   {
     icon: Phone,
@@ -50,8 +50,8 @@ export const Contact = () => {
     setSubmitStatus({ type: null, message: "" });
     try {
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
       if (!serviceId || !templateId || !publicKey) {
         throw new Error(
