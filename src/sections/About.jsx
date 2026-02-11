@@ -49,7 +49,7 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                Hello! I'm Megan—a junior web developer with a passion for
+                Hello! I'm Megan—a Junior Front End Engineer with a passion for
                 bringing beautiful designs to life through code.
               </p>
 
