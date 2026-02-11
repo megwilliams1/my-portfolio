@@ -6,7 +6,7 @@ import {
   Linkedin,
   Download,
 } from "lucide-react";
-import {AnimatedBorderButton} from "@/components/AnimatedBorderButton";
+import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const skills = [
   "React",
@@ -83,7 +83,7 @@ export const Hero = () => {
               </Button>
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
-                Download CV
+                Download PDF
               </AnimatedBorderButton>
             </div>
 
