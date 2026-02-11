@@ -1,7 +1,7 @@
 const experiences = [
   {
     period: "2026 — Present",
-    role: "OJT Web Developer",
+    role: "OJT Front End Engineer",
     company: "Banyan Labs",
     description: "...",
     technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
@@ -9,10 +9,10 @@ const experiences = [
   },
   {
     period: "2024-2024",
-    role: "Junior Developer",
+    role: "Junior Front End Engineer",
     company: "Persevere",
     description:
-      "Joined Persevere as a Junior Developer where I learned Responsive Web Design and JavaScript and Data Structures.",
+      "Joined Persevere as a Junior Front End Engineer where I learned Responsive Web Design and JavaScript and Data Structures.",
     technologies: ["HTML", "CSS", "JavaScript", "Data Structures"],
     current: false,
   },

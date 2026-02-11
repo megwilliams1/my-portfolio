@@ -78,9 +78,11 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
+              <a href="#contact">
+                <Button size="lg">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
                 Download PDF
@@ -123,7 +125,7 @@ export const Hero = () => {
                 <img
                   src="/profile-photo.jpg"
                   alt="Megan Williams"
-                  className="w-full aspect-4/5 object-cover rounded-2xl"
+                  className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 
                 {/* Floating Badge */}
