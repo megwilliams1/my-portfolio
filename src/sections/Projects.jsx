@@ -9,12 +9,12 @@ const projects = [
       "A comprehensive habit tracking web app with persistent streaks, dark mode, custom themes, floating animations, progress tracking, and heatmap visualizations.",
     image: "/projects/daily-glow.jpg",
     tags: ["React", "Tailwind CSS", "Vite"],
-    link: "#",
-    github: "#",
+    link: "https://daily-glow-plum.vercel.app/",
+    github: "https://github.com/megwilliams1/daily-glow#",
   },
 
   {
-    title: "Product Page",
+    title: "Megan's Boutique",
     description:
       "A demo e-commerce product page for a women's clothing boutique built with React and Vanilla CSS. Features product listings, descriptions, and a clean, responsive feminine design.",
     image: "/projects/product-page.jpg",
