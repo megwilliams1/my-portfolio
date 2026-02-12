@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -50,7 +51,8 @@ export const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
           <a href="#contact">
             <Button size="sm">Contact Me</Button>
           </a>
@@ -78,9 +80,12 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button>Contact Me</Button>
-            </a>
+            <div className="flex items-center gap-3 pt-2">
+              <ThemeToggle />
+              <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button>Contact Me</Button>
+              </a>
+            </div>
           </div>
         </div>
       )}
