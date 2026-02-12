@@ -48,11 +48,7 @@ export const About = () => {
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
-              <p>
-                Hello! I'm Megan—a Junior Front End Engineer with a passion for
-                bringing beautiful designs to life through code.
-              </p>
-
+              
               <p>
                 My journey began in 2024 with Persevere, where I discovered my
                 passion for creating beautiful, user-centered digital
