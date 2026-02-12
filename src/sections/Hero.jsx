@@ -63,7 +63,7 @@ export const Hero = () => {
                 <br />
                 experiences with
                 <br />
-                <span className="font-serif italic font-normal dark:text-white light:text-black">
+                <span className="font-serif italic font-normal text-foreground">
                   precision.
                 </span>
               </h1>

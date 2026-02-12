@@ -50,8 +50,8 @@ export const Contact = () => {
     setSubmitStatus({ type: null, message: "" });
     try {
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
       if (!serviceId || !templateId || !publicKey) {
         throw new Error(
@@ -100,7 +100,7 @@ export const Contact = () => {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             Let's build{" "}
-            <span className="font-serif italic font-normal text-white">
+            <span className="font-serif italic font-normal text-foreground">
               something great.
             </span>
           </h2>
