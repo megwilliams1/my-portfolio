@@ -3,12 +3,12 @@ const experiences = [
     period: "2026 — Present",
     role: "OJT Front End Engineer",
     company: "Banyan Labs",
-    description: "...",
+    description: "Building and shipping production-ready applications as an OJT Front End Engineer. Focused on UI/UX, component architecture, and delivering polished, accessible, user-centered interfaces using React, Next.js, TypeScript, and Tailwind CSS.",
     technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
     current: true,
   },
   {
-    period: "2024-2024",
+    period: "2024",
     role: "Junior Front End Engineer",
     company: "Persevere",
     description:
@@ -18,7 +18,10 @@ const experiences = [
   },
 ];
 
+import { useInView } from "@/hooks/useInView";
+
 export const Experience = () => {
+  const [ref, isInView] = useInView();
   return (
     <section id="experience" className="py-32 relative overflow-hidden">
       <div
@@ -26,19 +29,16 @@ export const Experience = () => {
        h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2"
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div ref={ref} className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <span
-            className="text-secondary-foreground text-sm
-           font-medium tracking-wider uppercase animate-fade-in"
+            className={`text-secondary-foreground text-sm font-medium tracking-wider uppercase ${isInView ? "animate-fade-in" : "opacity-0"}`}
           >
             Career Journey
           </span>
           <h2
-            className="text-4xl md:text-5xl font-bold
-           mt-4 mb-6 animate-fade-in animation-delay-100
-            text-secondary-foreground"
+            className={`text-4xl md:text-5xl font-bold mt-4 mb-6 animation-delay-100 text-secondary-foreground ${isInView ? "animate-fade-in" : "opacity-0"}`}
           >
             Experience that{" "}
             <span className="font-serif italic font-normal text-foreground">
@@ -48,8 +48,7 @@ export const Experience = () => {
           </h2>
 
           <p
-            className="text-muted-foreground
-           animate-fade-in animation-delay-200"
+            className={`text-muted-foreground animation-delay-200 ${isInView ? "animate-fade-in" : "opacity-0"}`}
           >
             A timeline of my professional growth, from curious beginner to
             Training and Development at Banyan Labs.
@@ -65,7 +64,7 @@ export const Experience = () => {
             {experiences.map((exp, idx) => (
               <div
                 key={idx}
-                className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
+                className={`relative grid md:grid-cols-2 gap-8 ${isInView ? "animate-fade-in" : "opacity-0"}`}
                 style={{ animationDelay: `${(idx + 1) * 150}ms` }}
               >
                 {/* Timeline Dot */}

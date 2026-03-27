@@ -1,6 +1,7 @@
 import { ArrowUpRight, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { useState } from "react";
+import { useInView } from "@/hooks/useInView";
 
 const projects = [
   {
@@ -14,19 +15,38 @@ const projects = [
   },
 
   {
-    title: "Megan's Boutique",
+    title: "Softly",
     description:
-      "A demo e-commerce product page for a women's clothing boutique built with React and Vanilla CSS. Features product listings, descriptions, and a clean, responsive feminine design.",
-    image: "/projects/product-page.jpg",
-    tags: ["React", "CSS", "JavaScript"],
-    link: "#",
-    github: "https://github.com/megwilliams1/TheFinals",
+      "A gentle, emotionally-aware productivity app built around a living garden metaphor — you don't complete tasks, you nurture them. Designed for people who feel overwhelmed by traditional productivity tools, Softly prioritizes calm, clarity, and emotional safety.",
+    image: "/projects/softly.png",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    link: "https://softly--softly-b97e8.us-central1.hosted.app/",
+    github: "https://github.com/megwilliams1/softly",
+  },
+
+  {
+    title: "Hook, Line, & Savannah",
+    description:
+      "A fullstack community hub for Savannah, TN — the Catfish Capital of Tennessee. Built with a fellow engineer. Features a community event calendar, local resource listings, and email notifications. Full-stack Next.js app with PostgreSQL, Prisma ORM, and server actions.",
+    image: "/projects/hook-line-savannah.png",
+    tags: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Prisma",
+      "PostgreSQL",
+      "Vercel",
+    ],
+    link: "https://sav-community-hub--sav-community-hub.us-east4.hosted.app/",
+    github: "https://github.com/RBlaylock-Dev/sav-community-hub",
   },
 ];
 
 export const Projects = () => {
   // Track which project card is currently showing
   const [activeIdx, setActiveIdx] = useState(0);
+  const [ref, isInView] = useInView();
 
   // Go to next project (loops back to start)
   const next = () => {
@@ -47,20 +67,20 @@ export const Projects = () => {
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div ref={ref} className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mx-auto max-w-3xl mb-16">
-          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
+          <span className={`text-secondary-foreground text-sm font-medium tracking-wider uppercase ${isInView ? "animate-fade-in" : "opacity-0"}`}>
             Featured Work
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+          <h2 className={`text-4xl md:text-5xl font-bold mt-4 mb-6 animation-delay-100 text-secondary-foreground ${isInView ? "animate-fade-in" : "opacity-0"}`}>
             Projects that
             <span className="font-serif italic font-normal text-foreground">
               {" "}
               make an impact.
             </span>
           </h2>
-          <p className="text-muted-foreground animate-fade-in animation-delay-200">
+          <p className={`text-muted-foreground animation-delay-200 ${isInView ? "animate-fade-in" : "opacity-0"}`}>
             A selection of my recent work, from complex web applications to fun
             and interactive personal projects.
           </p>
@@ -69,7 +89,7 @@ export const Projects = () => {
         {/* ============================
             CAROUSEL WRAPPER
         ============================= */}
-        <div className="max-w-4xl mx-auto animate-fade-in animation-delay-300">
+        <div className={`max-w-4xl mx-auto animation-delay-300 ${isInView ? "animate-fade-in" : "opacity-0"}`}>
           {/* Project Card */}
           <div className="glass rounded-3xl overflow-hidden border border-primary/20 hover:border-primary/40 transition-all duration-500">
             {/* Project Image */}
@@ -195,7 +215,7 @@ export const Projects = () => {
         </div>
 
         {/* View All on GitHub CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
+        <div className={`text-center mt-12 animation-delay-500 ${isInView ? "animate-fade-in" : "opacity-0"}`}>
           <a
             href="https://github.com/megwilliams1"
             target="_blank"

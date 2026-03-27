@@ -68,11 +68,11 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hello! I'm Megan Williams, a junior web developer with an iced
-                coffee always in hand and a passion for bringing beautiful
-                designs to life through code. I'm currently learning React and
-                Tailwind CSS and I'm excited to bring my skills to your next
-                project.
+                Hello! I'm Megan Williams — a frontend developer with an iced
+                coffee always in hand and a passion for turning beautiful
+                designs into real, working experiences. I'm currently an OJT
+                Front End Engineer at Banyan Labs, building production apps
+                with React, Next.js, TypeScript, and Tailwind CSS.
               </p>
             </div>
 
@@ -83,10 +83,12 @@ export const Hero = () => {
                   Contact Me <ArrowRight className="w-5 h-5" />
                 </Button>
               </a>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Download PDF
-              </AnimatedBorderButton>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Download PDF
+                </AnimatedBorderButton>
+              </a>
             </div>
 
             {/* Social Links & icons */}
